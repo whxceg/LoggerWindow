@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sam.lib.window">
+
+    <application>
+        <activity
+            android:name="com.sam.lib.logger.window.ui.LoggerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.sam.lib.logger.window.ui.LoggerSwitchActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <receiver android:name="com.sam.lib.logger.window.LoggerReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+                <data
+                    android:host="1991"
+                    android:scheme="android_secret_code" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
